@@ -3,20 +3,27 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Widgets from "./components/Widgets";
+import Login from "./components/Login";
 
 function App() {
+  const user = null;
   return (
     // BEM naming convention
     <div className="app">
-      {/* Header */}
-      <Header />
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <Header />
 
-      {/* App body*/}
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-        <Widgets />
-      </div>
+          {/* App body*/}
+          <div className="app__body">
+            <Sidebar />
+            <Feed />
+            <Widgets />
+          </div>
+        </>
+      )}
     </div>
   );
 }

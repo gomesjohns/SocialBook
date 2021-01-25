@@ -16,7 +16,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left">
-        <img src="./Images/socialBook_logo.jpg" alt="socialbook logo" />
+        <img src="./Images/socialBook_logo.png" alt="socialbook logo" />
 
         <div className="header__input">
           <SearchIcon />
